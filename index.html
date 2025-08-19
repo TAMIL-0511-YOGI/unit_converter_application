@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔄 Universal Unit Converter</h1>
+
+    <div class="converter">
+      <label for="category">Choose Category:</label>
+      <select id="category" onchange="populateUnits()">
+        <option value="length">📏 Length</option>
+        <option value="weight">⚖️ Weight</option>
+        <option value="volume">💧 Volume</option>
+      </select>
+
+      <div class="unit-selectors">
+        <select id="fromUnit"></select>
+        <select id="toUnit"></select>
+      </div>
+
+      <input type="number" id="inputValue" placeholder="Enter value..." />
+      <button onclick="convert()">Convert ✨</button>
+
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    window.onload = populateUnits;
+  </script>
+</body>
+</html>
